@@ -208,20 +208,31 @@
 				});
 
 		}
-	// Contact form submission
+		// Contact form submission
 		document.querySelector('form').addEventListener('submit', function(event) {
 			event.preventDefault();
-			fetch(this.action, {
+			const form = this;
+			fetch(form.action, {
 				method: 'POST',
-				body: new FormData(this),
+				body: new FormData(form),
 				headers: { 'Accept': 'application/json' }
-			}).then(response => {
+			})
+			.then(response => {
 				if (response.ok) {
 					document.getElementById('confirmation').style.display = 'block';
-					this.reset();
+					form.reset();
 				} else {
-					alert("There was an issue sending your message. Please try again.");
+					response.json().then(data => {
+						if (data.errors) {
+							alert("There was an issue sending your message: " + data.errors.map(error => error.message).join(", "));
+						} else {
+							alert("There was an issue sending your message. Please try again.");
+						}
+					});
 				}
+			})
+			.catch(error => {
+				alert("Network error. Please check your connection and try again.");
 			});
 		});
 
