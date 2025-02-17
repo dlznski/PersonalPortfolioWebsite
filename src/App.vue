@@ -40,8 +40,8 @@ export default defineComponent({
       ],
       projects: [
         { title: 'Bobi The Slayer', image: '/Bobi.webp', technology: 'Unity', link: 'https://github.com/dlznski/Unity_3D_Project' },
-        { title: 'ChronoGate', image: '/Gate.webp', technology: 'Unity', link: 'https://mygame.com/voxelworld' },
-        { title: 'This Site', image: '/Site.webp', technology: 'Vue.js 3', link: 'https://mygame.com/voxelworld' }
+        { title: 'ChronoGate', image: '/Gate.webp', technology: 'Unity', link: 'https://github.com/dlznski/ChronoGate' },
+        { title: 'This Site', image: '/Site.webp', technology: 'Vue.js 3', link: 'https://github.com/dlznski/PersonalPortfolioWebsite' }
       ],
       accordionItems: [
         {
