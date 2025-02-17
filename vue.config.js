@@ -14,19 +14,14 @@ module.exports = defineConfig({
         return {
           ...options,
           plugins: [
-            ["@babel/plugin-proposal-decorators", { "legacy": true }],
-            ["@babel/plugin-proposal-class-properties", { "loose": true }]
-          ],
+            ["@babel/plugin-proposal-decorators", { legacy: true }],
+            ["@babel/plugin-proposal-class-properties", { loose: true }]
+          ]
         };
       });
   },
 
   pluginOptions: {
-    vuetify: {
-      // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader
-    },
-    ghPages: {
-      log: console
-    }
+    vuetify: {},
   },
 });
