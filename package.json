@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "gh-pages": "vue-cli-service gh-pages",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
@@ -37,6 +39,7 @@
     "sass": "^1.85.0",
     "sass-loader": "^13.3.3",
     "typescript": "^5.7.3",
+    "vue-cli-plugin-gh-pages": "~2.0.0",
     "vue-cli-plugin-vuetify": "~2.5.8",
     "vue-loader": "^17.4.2",
     "webpack": "^5.98.0",
