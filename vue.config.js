@@ -25,5 +25,8 @@ module.exports = defineConfig({
     vuetify: {
       // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader
     },
+    ghPages: {
+      log: console
+    }
   },
 });
