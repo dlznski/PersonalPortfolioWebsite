@@ -5,7 +5,7 @@
       <v-col v-for="project in projects" :key="project.title" cols="12" sm="6">
         <v-card class="portfolioGallery_GameCard">
           <v-img :src="project.image" height="200px" contain/>
-          <v-card-title>{{ project.title }}</v-card-title>
+          <v-card-title class="portfolioGallery_Title">{{ project.title }}</v-card-title>
           <v-card-subtitle>{{ project.technology }}</v-card-subtitle>
           <v-card-actions>
             <v-btn color="primary" :href="project.link" target="_blank">See More</v-btn>
@@ -42,6 +42,10 @@ export default toNative(PortfolioGallery)
     background-color: #121212;
     color: #ffffff;
     border-radius: 10px;
+  }
+
+  &_Title {
+    font-size: 1.2rem;
   }
 }
 </style>

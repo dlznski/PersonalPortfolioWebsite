@@ -41,6 +41,7 @@ export default defineComponent({
       projects: [
         { title: 'Bobi The Slayer', image: '/Bobi.webp', technology: 'Unity', link: 'https://github.com/dlznski/Unity_3D_Project' },
         { title: 'ChronoGate', image: '/Gate.webp', technology: 'Unity', link: 'https://github.com/dlznski/ChronoGate' },
+        { title: 'Omen of Suffering', image: '/Omen.webp', technology: 'Unreal Engine 5', link: 'https://github.com/dlznski/OmenOfSuffering' },
         { title: 'This Site', image: '/Site.webp', technology: 'Vue.js 3', link: 'https://github.com/dlznski/PersonalPortfolioWebsite' }
       ],
       accordionItems: [

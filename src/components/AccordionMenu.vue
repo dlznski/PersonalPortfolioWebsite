@@ -82,7 +82,7 @@ export default toNative(AccordionMenu);
   }
 
   &_Iframe {
-    height: 850px;
+    height: 815px;
   }
 }
 </style>
