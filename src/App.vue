@@ -3,7 +3,7 @@
     <div class="app_Wrapper">
       <v-container class="app_Container" :class="{ blurred: isPopupOpen }">
         <ProfileSection name="Amadeusz Dłużniewski" description="Game Developer | Frontend Developer" :socials="socials"/>
-        <ContactButtons phone="+48667919274" contact="https://www.linkedin.com/in/dlznski" @togglePopup="togglePopup"/>
+        <ContactButtons contact="https://www.linkedin.com/in/dlznski" @togglePopup="togglePopup"/>
         <PortfolioGallery :projects="projects"/>
         <AccordionMenu :items="accordionItems"/>
         <SiteFooter/>

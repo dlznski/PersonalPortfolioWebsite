@@ -1,6 +1,6 @@
 <template>
   <v-container class="contactButtons">
-    <v-btn block class="mb-2 contactButtons_Btn" :href="'`tel:${phone}`'">
+    <v-btn block class="mb-2 contactButtons_Btn" :href="'tel:+48667919274'">
       <v-icon left class="contactButtons_Icon">mdi-phone</v-icon>
       Call Me
     </v-btn>
