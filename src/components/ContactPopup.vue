@@ -8,12 +8,14 @@
         </v-btn>
       </v-card-title>
       <v-card-text>
-        <v-form ref="form" lazy-validation @submit.prevent="submitForm">
+        <v-form ref="form" @submit.prevent="submitForm">
           <v-text-field v-model="formData.name" label="Name" :rules="[rules.required]" required/>
           <v-text-field v-model="formData.email" label="Email" type="email" :rules="[rules.required, rules.email]" required/>
           <v-text-field v-model="formData.subject" label="Subject" :rules="[rules.required]" required/>
           <v-textarea v-model="formData.message" label="Message" rows="4" :rules="[rules.required]" required/>
-          <v-alert v-if="confirmation" type="success" class="mt-2">Thank you for your message. I'll get back to you shortly.</v-alert>
+          <v-alert v-if="confirmation" type="success" class="mt-2">
+            Thank you for your message. I'll get back to you shortly.
+          </v-alert>
           <v-btn type="submit" class="contactPopup_SendBtn" color="primary">Send Message</v-btn>
         </v-form>
       </v-card-text>
@@ -44,9 +46,12 @@ class ContactPopup extends Vue {
   onPopupOpenChange(newVal: boolean) {
     this.internalPopupState = newVal;
   }
+
   async submitForm() {
     const form = this.$refs.form as any;
-    if (!form.validate()) return;
+    if (!form.validate()) {
+      return;
+    }
 
     try {
       const response = await fetch('https://formspree.io/f/mvgpjywj', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(this.formData) });
@@ -77,6 +82,7 @@ class ContactPopup extends Vue {
     }, 100);
   }
 }
+
 export default toNative(ContactPopup);
 </script>
 
