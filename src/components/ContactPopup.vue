@@ -13,9 +13,7 @@
           <v-text-field v-model="formData.email" label="Email" type="email" :rules="[rules.required, rules.email]" required/>
           <v-text-field v-model="formData.subject" label="Subject" :rules="[rules.required]" required/>
           <v-textarea v-model="formData.message" label="Message" rows="4" :rules="[rules.required]" required/>
-          <v-alert v-if="confirmation" type="success" class="mt-2">
-            Thank you for your message. I'll get back to you shortly.
-          </v-alert>
+          <v-alert v-if="confirmation" type="success" class="mt-2" text="Thank you for your message. I'll get back to you shortly."/>
           <v-btn type="submit" class="contactPopup_SendBtn" color="primary">Send Message</v-btn>
         </v-form>
       </v-card-text>
@@ -49,7 +47,7 @@ class ContactPopup extends Vue {
 
   async submitForm() {
     const form = this.$refs.form as any;
-    if (!form.validate()) {
+    if (!this.formData.name || !this.formData.email || !this.formData.subject || !this.formData.message || !form.validate()) {
       return;
     }
 
