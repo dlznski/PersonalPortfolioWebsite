@@ -2,7 +2,7 @@
   <v-app class="app">
     <div class="app_Wrapper">
       <v-container class="app_Container" :class="{ blurred: isPopupOpen }">
-        <ProfileSection name="Amadeusz Dłużniewski" description="Game Developer | Frontend Developer" :socials="socials"/>
+        <ProfileSection name="Amadeusz Dłużniewski" description="Game Developer | Full Stack Developer" :socials="socials"/>
         <ContactButtons contact="https://www.linkedin.com/in/dlznski" @togglePopup="togglePopup"/>
         <PortfolioGallery :projects="projects"/>
         <AccordionMenu :items="accordionItems"/>
